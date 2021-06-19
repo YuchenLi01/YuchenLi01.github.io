@@ -81,20 +81,18 @@
               </a>
               <br>
                 <strong>Yuchen Li*</strong>,
-                <a href="https://www.andrew.cmu.edu/user/aristesk/">Andrej Risteski*</a>,
+                <a href="https://www.andrew.cmu.edu/user/aristesk/">Andrej Risteski*</a>
               <br>
               <em>Association for Computational Linguistics (ACL)</em>, 2021 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
               <br>
               <a href="data/li2021limitations.bib">bibtex</a> /
               <a href="https://twitter.com/_yuchen_li_/status/1402413507115692035?s=21">My Twitter post</a> /
               <a href="https://twitter.com/risteski_a/status/1402110089801179139?s=21">Andrej's Twitter post</a>
-              <p>How well can you parse a sentence from left to right in one pass?
-                  We theoretically quantify how the "context" affects the representational power of parsing models.
+              <p>We prove that, if the context for the parsing decision at each word is <em>unbounded</em> & <em>bidirectional</em>,
+                then the parsing model has full representational power.
               </p>
-              <p>More specifically, we show that, the context for the calculation at each word must be <em>unbounded</em> & <em>in both directions</em> (left & right), in order to have full parsing power,
-                while even if the context is bounded in one direction, the parsing power is quite limited for some hard grammars.
-              </p>
-              <p>The results were proven for various leading approaches to constituency parsing, but the method is applicable to other models, too.
+              <p>On the other hand, even if the context is bounded in one direction (which is the case for various leading approaches to constituency parsing),
+                the parsing power is quite limited for hard grammars.
               </p>
             </td>
           </tr>
@@ -111,7 +109,7 @@
                 <a href="https://www.linkedin.com/in/xinwei-he-586512134/">Xinwei He*</a>,
                 <a href="https://faculty.math.illinois.edu/~hildebr/">AJ Hildebrand*</a>,
                 <strong>Yuchen Li*</strong>,
-                <a href="https://yzhan238.github.io/">Yunyi Zhang*</a>,
+                <a href="https://yzhan238.github.io/">Yunyi Zhang*</a>
               <br>
               <em>Journal of Discrete Mathematics & Theoretical Computer Science (DMTCS)</em>, vol. 22 no. 1, Automata, Logic and Semantics 2020 &nbsp
               <br>
@@ -119,13 +117,40 @@
               <a href="data/Complexity_Poster_JMM_2018.pdf">poster</a>
               <p>Consider the sequence of leading digits of 2^n: 1, 2, 4, 8, 1, 3, 6, ......
                 What is the <em>complexity</em> of such sequences?
+                They are neither <em>periodic</em> nor <em>random</em>.
+                How to quantify and distinguish the middle ground?
               </p>
-              <p>We show that, the <em>block complexity is linear</em> for the sequence of leading digits of a^n in base b (for all square-free integer b>=5 and rational number a>0 that are not integral powers of b).
-                In fact, we give explicit formula for the linear coefficients in terms of a and b, in the above case.
+              <p>We prove that, the <em>block complexity is linear</em> for the sequence of leading digits of a^n in base b (except for some special cases).
+                In fact, we give explicit formula for the linear coefficients in terms of a and b.
               </p>
-              <p>Furthermore, we apply this result to obtain sharp upper and lower bounds and determine the asymptotic behavior for the block complexity.
-              </p>
-              <p>Finally, we discuss some other complexity measures for such sequences, and relate to broader concepts such as <em>Benford’s Law</em>.
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/HyperMine.png" alt="HyperMine" width="160" height="160">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/1909.01584">
+                <papertitle>Discovering Hypernymy in Text-Rich Heterogeneous Information Network by Exploiting Context Granularity</papertitle>
+              </a>
+              <br>
+                <a href="https://yu-shi-homepage.github.io/">Yu Shi*</a>,
+                <a href="http://mickeystroller.github.io/">Jiaming Shen*</a>,
+                <strong>Yuchen Li</strong>,
+                <a href="https://www.linkedin.com/in/naijing-zhang/">Naijing Zhang</a>,
+                <a href="https://www.linkedin.com/in/xinwei-he-586512134/">Xinwei He</a>,
+                <a href="https://www.linkedin.com/in/samuel-lou-70540490/">Zhengzhi Lou</a>,
+                <a href="https://gentlezhu.github.io/">Qi Zhu</a>,
+                <a href="https://www.linkedin.com/in/matthewhhwalker/">Matthew Walker</a>,
+                <a href="http://infolab.stanford.edu/~mykim/">Myunghwan Kim</a>,
+                <a href="http://hanj.cs.illinois.edu/">Jiawei Han</a>
+              <br>
+              <em>Conference on Information and Knowledge Management (CIKM)</em>, 2019
+              <br>
+              <a href="data/shi2019discovering.bib">bibtex</a>
+              <p>This work discovers hypernym-hyponym ("is-a" relation) pairs by an innovative combination of information from natural language and graph structure.
+                Our system outperforms existing methods that utilizes signals from text, graph, or both.
               </p>
             </td>
           </tr>
