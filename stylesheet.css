@@ -129,8 +129,3 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
-
-/* Hide the clustrmaps pageview counter */
-#clustrmaps {
-  display:none;
-}
