@@ -55,7 +55,8 @@
               <heading>Research</heading>
               <p>
                 I study machine learning, natural language processing, and data mining.
-                My long-term goals include improving mathematical understanding of empirical phenomena, and developing principled approaches to modern deep learning applications.
+                I currently work on (1) improving mathematical understanding of how neural network models (especially transformers) process language, and
+                (2) developing principled approaches to self-supervised learning.
               </p>
             </td>
           </tr>
@@ -75,26 +76,55 @@
 
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
 
-          <tr>
+        <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
-              <img src="images/aistats_logo.jpeg" alt="aistats_logo" style="width:100%;max-width:100%">
+              <img src="images/transformer_lda.png" alt="Embedding weight dot product of models trained on synthetic topic modeling data" style="width:100%;max-width:100%">
             </td>
             <td width="75%" valign="middle">
-<!--              <a href="">-->
+              <a href="https://arxiv.org/abs/2303.04245">
+                <papertitle>How Do Transformers Learn Topic Structure: Towards a Mechanistic Understanding</papertitle>
+              </a>
+              <br>
+                <strong>Yuchen Li</strong>,
+                Yuanzhi Li,
+                Andrej Risteski
+              <br><br>
+              <em>arXiv</em>, 2023
+              <br>
+              <a href="data/li2023transformers.bib">bibtex</a>
+<!--              / <a href="data/li2021limitations_slides.pdf">slides</a>-->
+<!--              / <a href="https://twitter.com/_yuchen_li_/status/1402413507115692035?s=21">My Twitter post</a>-->
+<!--              / <a href="https://twitter.com/risteski_a/status/1402110089801179139?s=21">Andrej's Twitter post</a>-->
+              <p>We analyze the optimization process of transformers trained on data involving "semantic structure", e.g. topic modeling.
+                Through theoretical analysis and experiments, we show that between same-topic words, the embeddings should be more similar, and the average pairwise attention should be larger.
+              </p>
+              <p>In particular, we observe that with carefully chosen initialization and learning rate, the optimization process of self-attention can be approximately broken down into <em>two stages</em>:
+                in stage 1, only the value matrix changes significantly; in stage 2, the key and query matrices catch up much later, even though all components are <em>jointly optimized</em> through standard SGD or Adam.
+                This observation might be of independent interest, for future works on understanding the learning dynamics of transformers as well.
+              </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/contrastive_landscape.png" alt="Minimum Max-Cosine for noncontrastive loss (NCL) and contrastive loss (CL) on an architecture with a randomly initialized linear encoder." style="width:100%;max-width:100%">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2203.15702">
                 <papertitle>Contrasting the landscape of contrastive and non-contrastive learning</papertitle>
-<!--              </a>-->
-<!--              <br>-->
-<!--                <strong>Yuchen Li*</strong>,-->
-<!--                Andrej Risteski*-->
-<!--              <br><br>-->
+              </a>
+              <br>
+                Ashwini Pokle*,
+                Jinjin Tian*,
+                <strong>Yuchen Li*</strong>,
+                Andrej Risteski
+              <br><br>
               <em>Conference on Artificial Intelligence and Statistics (AISTATS)</em>, 2022
               <br>
-<!--              <a href="data/li2021limitations.bib">bibtex</a> /-->
-<!--              <a href="data/li2021limitations_slides.pdf">slides</a> /-->
-<!--              <a href="https://twitter.com/_yuchen_li_/status/1402413507115692035?s=21">My Twitter post</a> /-->
-<!--              <a href="https://twitter.com/risteski_a/status/1402110089801179139?s=21">Andrej's Twitter post</a>-->
-              <p>Recently accepted. More details to come!
-              </p>
+              <a href="data/pokle2022contrasting.bib">bibtex</a>
+<!--              / <a href="data/li2021limitations_slides.pdf">slides</a> /-->
+              / <a href="https://twitter.com/_Yuchen_Li_/status/1509187738582458370?s=20">My Twitter post</a>
+<!--              / <a href="https://twitter.com/risteski_a/status/1402110089801179139?s=21">Andrej's Twitter post</a>-->
               <p>We show through theoretical results and controlled experiments that even on simple data models,
                 non-contrastive losses have a preponderance of <em>non-collapsed bad minima</em>
                 (which do not exist for their contrastive loss counterpart).
@@ -112,8 +142,8 @@
                 <papertitle>The Limitations of Limited Context for Constituency Parsing</papertitle>
               </a>
               <br>
-                <strong>Yuchen Li*</strong>,
-                Andrej Risteski*
+                <strong>Yuchen Li</strong>,
+                Andrej Risteski
               <br><br>
               <em>Association for Computational Linguistics (ACL)</em>, 2021
               <br>
