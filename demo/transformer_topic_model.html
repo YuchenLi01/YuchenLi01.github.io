@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>How Do Transformers Learn Topic Structure</title>
+
+  <meta name="author" content="me">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+  <link rel="icon" type="image/png" href="../images/transformer_lda.png">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:3%">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:0%;width:65%;max-width:65%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>(Website in progress) How Do Transformers Learn Topic Structure: <br>Towards a Mechanistic Understanding</name>
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:yuchenl4@cs.cmu.edu">Contact (email)</a> &nbsp/&nbsp
+                <a href="https://arxiv.org/abs/2303.04245">Paper (arXiv)</a> &nbsp/&nbsp
+                <a href="../data/li2023transformers.bib">bibtex</a> &nbsp/&nbsp
+                <a href="../data/li2023transformers_slides.pdf">slides</a> &nbsp/&nbsp
+                <a href="https://twitter.com/_Yuchen_Li_/status/1634681302015262725?s=20">Twitter summary</a> &nbsp/&nbsp
+                <a href="https://github.com/YuchenLi01/transformer_topic_model_LDA">Codes (GitHub)</a>
+              </p>
+              <p>We analyze the optimization process of transformers trained on data involving "semantic structure", e.g. topic modeling.
+                Through theoretical analysis and experiments, we show that between same-topic words, the embeddings should be more similar, and the average pairwise attention should be larger.
+              </p>
+              <p>In particular, we observe that with carefully chosen initialization and learning rate, the optimization process of self-attention can be approximately broken down into <em>two stages</em>:
+                in stage 1, only the value matrix changes significantly; in stage 2, the key and query matrices catch up much later, even though all components are <em>jointly optimized</em> through standard SGD or Adam.
+                This observation might be of independent interest, for future works on understanding the learning dynamics of transformers as well.
+              </p>
+          </tr>
+        </tbody></table>
+        <br><br>
+
+
+      </td>
+    </tr>
+  </tbody></table>
+</body>
+
+</html>
