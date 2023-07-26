@@ -18,23 +18,155 @@
           <tr style="padding:0px">
             <td style="padding:0%;width:65%;max-width:65%;vertical-align:middle">
               <p style="text-align:center">
-                <name>(Website in progress) How Do Transformers Learn Topic Structure: <br>Towards a Mechanistic Understanding</name>
+                <name>How Do Transformers Learn Topic Structure: <br>Towards a Mechanistic Understanding</name>
               </p>
               <p style="text-align:center">
-                <a href="mailto:yuchenl4@cs.cmu.edu">Contact (email)</a> &nbsp/&nbsp
-                <a href="https://arxiv.org/abs/2303.04245">Paper (arXiv)</a> &nbsp/&nbsp
+                <a href="mailto:yuchenl4@cs.cmu.edu">contact (email)</a> &nbsp/&nbsp
+                <a href="https://arxiv.org/abs/2303.04245">paper (arXiv)</a> &nbsp/&nbsp
                 <a href="../data/li2023transformers.bib">bibtex</a> &nbsp/&nbsp
                 <a href="../data/li2023transformers_slides.pdf">slides</a> &nbsp/&nbsp
                 <a href="https://twitter.com/_Yuchen_Li_/status/1634681302015262725?s=20">Twitter summary</a> &nbsp/&nbsp
-                <a href="https://github.com/YuchenLi01/transformer_topic_model_LDA">Codes (GitHub)</a>
+                <a href="https://github.com/YuchenLi01/transformer_topic_model_LDA">codes (GitHub)</a>
               </p>
+
+              <heading>TL;DR</heading>
+              <p>
+                We develop mathematical understanding of the training process of transformers through the lens of learning topic structures.
+                We prove that the embedding layer or attention layer alone can learn to encode topic structure.
+              </p>
+
+              <p>
+                In particular, our main conceptual idea is that the optimization process of self-attention can be approximately broken down into <em>two stages</em> (when all model parameters are initialized to small matrices near 0).
+                This idea is theoretically reasonable, empirically verifiable, and makes the analysis tractable.
+              </p>
+
+              <p>
+                Experiments on synthetic and real-world data verify our theory.
+              </p>
+
+              <heading>Motivation</heading>
+
+              <p>
+                While the empirical successes of transformers across many domains are indisputable, accurate understanding of the learning mechanics is still largely lacking.
+                Their capabilities have been probed on benchmarks which include a variety of structured and reasoning tasks—but mathematical understanding is lagging substantially behind.
+                Recent lines of work have begun studying representational aspects of this question:
+                that is, the size/depth/complexity of attention-based networks to perform certain tasks.
+                However, there is no guarantee the learning dynamics will converge to the constructions proposed.
+                Therefore, theoretical understanding of transformers requires characterizing the optimization process.
+              </p>
+
+              <figure class="centered-image" id="fig-motivation">
+                <img style="width:100%; margin-top:20px;" src="transformer_topic_model_materials/motivation.png" alt="motivation.png">
+              </figure>
+
+              <heading>Methodology</heading>
+
+              <p>
+                We use synthetic data as a sandbox for a scientific approach to understanding deep learning models.
+                Real data are messy and complex (containing semantics, syntax, etc).
+                To study them in more formal manner,
+                we focus on one aspect at a time, by studying some simple synthetic setting
+                The benefits include controlling variables, which helps single out each factor to study.
+                The long-term research agenda is to progressively study more realistic data distributions.
+              </p>
+
+              <heading>Data distribution</heading>
+
+              <p>
+                We study semantic structure, as understood through the lens of co-occurrences of words, and
+                their topical structure. Precisely, if we fit topics to a real-life corpus like Wikipedia using a Latent Dirichlet
+                Allocation (LDA) model [6], we find a pretrained BERT model produces token embeddings
+                that are more similar (in terms of inner product or cosine similarity) if they belong to the same topic, and
+                more different if they belong to different topics.
+                Inspired by these observations, we study LDA-generated data as a sandbox to understand—both through
+                experiments on such synthetic data, and theoretical results—the process by which the embeddings and
+                attention learn the topical structure.
+                We find that the above observations from Wikipedia data are even
+                more pronounced on synthetic LDA data.
+              </p>
+
+              <figure class="centered-image" id="fig-data">
+                <img style="width:100%; margin-top:20px;" src="transformer_topic_model_materials/data.png" alt="data.png">
+              </figure>
+
+
+              <heading>Model architecture</heading>
+
+              <p>
+                We study a simplified one-layer transformer.
+              </p>
+
+              <figure class="centered-image" id="fig-architecture">
+                <img style="width:100%; margin-top:20px;" src="transformer_topic_model_materials/architecture.png" alt="architecture.png">
+              </figure>
+
+
+
+              <heading>Main theoretical results</heading>
+
               <p>We analyze the optimization process of transformers trained on data involving "semantic structure", e.g. topic modeling.
                 Through theoretical analysis and experiments, we show that between same-topic words, the embeddings should be more similar, and the average pairwise attention should be larger.
               </p>
+
+              <figure class="centered-image" id="fig-theory">
+                <img style="width:100%; margin-top:20px;" src="transformer_topic_model_materials/theory.png" alt="theory.png">
+              </figure>
+
+
+              <heading>Main conceptual idea</heading>
+
               <p>In particular, we observe that with carefully chosen initialization and learning rate, the optimization process of self-attention can be approximately broken down into <em>two stages</em>:
                 in stage 1, only the value matrix changes significantly; in stage 2, the key and query matrices catch up much later, even though all components are <em>jointly optimized</em> through standard SGD or Adam.
                 This observation might be of independent interest, for future works on understanding the learning dynamics of transformers as well.
               </p>
+
+              <figure class="centered-image" id="fig-two_stage">
+                <img style="width:100%; margin-top:20px;" src="transformer_topic_model_materials/two_stage.png" alt="two_stage.png">
+              </figure>
+
+
+              <heading>Future directions</heading>
+
+              <p>
+                We initiated the study of understanding training dynamics of transformers in the presence of semantic
+                structure captured by a topic model. Interesting directions of future work includes extending the analysis
+                to data distributions that captures “syntactic” structure, e.g. through simple sandboxes like PCFGs. When
+                both the model and the data distributions are complex, it remains a daunting challenge to “disentangle”
+                how the many different aspects of the data (e.g. semantic and syntactic elements) are learned through the
+                different parts of model architecture (e.g. attention, positional encodings, and embeddings).
+              </p>
+
+              <figure class="centered-image" id="fig-future">
+                <img style="width:100%; margin-top:20px;" src="transformer_topic_model_materials/future.png" alt="future.png">
+              </figure>
+
+
+            <heading>Acknowledgements</heading>
+
+              <p>
+                We thank Bingbin Liu, Yusha Liu, and Tanya Marwah for proofreading and providing constructive comments,
+                Yewen Fan for helpful suggestions on empirically obtaining the two-stage optimization process, and Emmy
+                Liu and Graham Neubig for insightful discussions on the connections with empirical observations.
+                Andrej Risteski and Yuchen Li acknowledge support by NSF awards IIS-2211907 and CCF-2238523.
+                Andrej Risteski also acknowledges support by Amazon Research Award “Causal + Deep Out-of-Distribution
+                Learning”.
+              </p>
+
+            <heading>References</heading>
+
+              <ol>
+                <li>Jorge Pérez et al, 2021, Attention is Turing Complete</li>
+                <li>Chulhee Yun et al, 2020, Are Transformers universal approximators of sequence-to-sequence functions?</li>
+                <li>Shunyu Yao et al, 2021, Self-Attention Networks Can Process Bounded Hierarchical Languages</li>
+                <li>Haoyu Zhao et al, 2023, Do Transformers Parse while Predicting the Masked Word?</li>
+                <li>Bingbin Liu et al, 2023, Transformers learn shortcuts to automata</li>
+                <li>David Blei, et al, 2003, Latent Dirichlet Allocation (LDA)</li>
+                <li>Charlie Snell, et al, 2021. Approximating how single head attention learns</li>
+                <li>Sébastien Bubeck et al, 2023, Sparks of AGI</li>
+                <li>avikdas.com/2020/01/28/the-balanced-parentheses-problem.html</li>
+              </ol>
+
+            
           </tr>
         </tbody></table>
         <br><br>
