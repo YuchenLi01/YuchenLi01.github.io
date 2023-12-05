@@ -62,7 +62,8 @@
               <heading>Research</heading>
               <p>
                 I study machine learning, natural language processing, and data mining.
-                I currently work on (1) improving mathematical understanding of how neural network models (especially transformers) process language, and
+                I currently work on (1) improving mathematical understanding of transformer-based language models
+                (training dynamics, efficient sampling, mechanistic interpretability), and
                 (2) developing principled approaches to self-supervised learning.
               </p>
             </td>
@@ -82,6 +83,35 @@
         </tbody></table>
 
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+
+        <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/dyck_interpretability.png" alt="Typical attention patterns do not exactly match the intuitively interpretable stack-like pattern" style="width:100%;max-width:100%">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2312.01429">
+                <papertitle>Transformers are uninterpretable with myopic methods: a case study with bounded Dyck grammars</papertitle>
+              </a>
+              <br>
+                Kaiyue Wen,
+                <strong>Yuchen Li</strong>,
+                Bingbin Liu,
+                Andrej Risteski
+              <br><br>
+              <em>Conference on Neural Information Processing Systems (NeurIPS)</em>, 2023
+              <br>
+              <a href="data/wen2023transformers.bib">bibtex</a>
+              / <a href="data/wen2023transformers_slides.pdf">slides</a>
+              / <a href="https://twitter.com/_Yuchen_Li_">Twitter summary</a>
+              / <a href="https://www.youtube.com/live/BZ34XH4ffEc?si=LjXAiYywQWys4zG5&t=20360">video recording of 15-minute talk (starts at 5:39:20)</a>
+              <p>We show that interpretability claims based on isolated attention patterns or weight components can be (provably) misleading.
+              </p>
+              <p>Our results are based on next-token prediction on Dyck (i.e. balanced brackets).
+                We show that Transformers (exactly or approximately) solving this task satisfy a structural characterization,
+                “balance condition“, derived from ideas in formal languages (the pumping lemma).
+              </p>
+            </td>
+        </tr>
 
         <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
@@ -289,6 +319,22 @@
         </tbody></table>
         <br><br>
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/dyck_interpretability.png" alt="Typical attention patterns do not exactly match the intuitively interpretable stack-like pattern" style="width:100%;max-width:100%">
+              <br><br>
+            </td>
+            <td width="75%" valign="center">
+              <papertitle>Transformers are uninterpretable with myopic methods: a case study with bounded Dyck grammars</papertitle>
+              <br>
+              <a href="data/wen2023transformers_slides.pdf">slides</a>
+              / <a href="https://www.youtube.com/live/BZ34XH4ffEc?si=LjXAiYywQWys4zG5&t=20360">video recording of 15-minute talk (starts at 5:39:20)</a>
+              <br><br>
+              2023-11
+              <a href="https://deepmath-conference.com/">DeepMath Conference on the Mathematical Theory of Deep Neural Networks</a>
+              <br><br>
+            </td>
+          </tr>
           <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
               <img src="images/transformer_lda.png" alt="transformers can learn the topic structure in the data distribution" style="width:100%;max-width:100%">
