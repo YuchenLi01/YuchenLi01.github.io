@@ -28,15 +28,22 @@
                 completing my bachelor's degree in Statistics & Computer Science, as well as Mathematics.
                 I am grateful for the mentorship of
                 Professor <a href="http://hanj.cs.illinois.edu/">Jiawei&nbsp;Han</a>,
-                Professor <a href="https://faculty.math.illinois.edu/~hildebr/">AJ&nbsp;Hildebrand</a>,
+                Professor <a href="https://math.illinois.edu/directory/profile/ajh">AJ&nbsp;Hildebrand</a>,
                 and Professor <a href="https://ece.princeton.edu/people/pramod-viswanath">Pramod&nbsp;Viswanath</a>.
               </p>
               <p>
                 In the industry, I spent some exciting time at
+                <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-new-york/">Microsoft</a> (summer 2024),
                 <a href="https://research.google/">Google</a> (summer 2023),
                 <a href="https://www.bytedance.com/en/">ByteDance (TikTok)</a> (summer 2022),
                 <a href="https://www.quora.com/about">Quora</a> (2019-2020),
-                and <a href="https://about.facebook.com/">Facebook</a> (summer 2018).
+                and <a href="https://about.meta.com/">Facebook (Meta)</a> (summer 2018).
+              </p>
+              <p>
+                In fall 2024, I am a visiting graduate student for the
+                <a href="https://simons.berkeley.edu/programs/modern-paradigms-generalization">Modern Paradigms in Generalization</a> program
+                at <a href="https://simons.berkeley.edu/homepage">Simons Institute for the Theory of Computing</a>
+                in Berkeley, California, USA.
               </p>
               <p style="text-align:center">
                 <a href="mailto:yuchenl4@cs.cmu.edu">Email</a> &nbsp/&nbsp
@@ -44,7 +51,7 @@
 <!--                <a href="data/JonBarron-bio.txt">Bio</a> &nbsp/&nbsp-->
                 <a href="https://www.linkedin.com/in/yuchenli01/">LinkedIn</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?hl=en&user=2Uu9K30AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://twitter.com/_Yuchen_Li_">Twitter</a> &nbsp/&nbsp
+                <a href="https://twitter.com/_Yuchen_Li_">Twitter (X)</a> &nbsp/&nbsp
                 <a href="https://github.com/YuchenLi01/">GitHub</a> &nbsp/&nbsp
                 <a href="https://www.quora.com/profile/Yuchen-Li-63/">Quora</a>
               </p>
@@ -62,7 +69,7 @@
               <heading>Research</heading>
               <p>
                 I study machine learning, natural language processing, and data mining.
-                I currently work on (1) improving mathematical understanding of transformer-based language models
+                I currently work on (1) improving mathematical understanding of language models
                 (training dynamics, efficient sampling, mechanistic interpretability), and
                 (2) developing principled approaches to self-supervised learning.
               </p>
@@ -86,6 +93,46 @@
 
         <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/k_pseudolikelihood_peaky.png" alt="Larger masking ratio implies smaller error in learning parameters for Ising models" style="width:100%;max-width:100%">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2407.21046">
+                <papertitle>Promises and Pitfalls of Generative Masked Language Modeling: Theoretical Framework and Practical Guidelines</papertitle>
+              </a>
+              <br>
+                <strong>Yuchen Li</strong>,
+                Alexandre Kirchmeyer*,
+                Aashay Mehta*,
+                Yilong Qin*,
+                Boris Dadachev*,
+                Kishore Papineni*,
+                Sanjiv Kumar,
+                Andrej Risteski
+              <br><br>
+              <em>International Conference on Machine Learning (ICML)</em>, 2024
+              <br>
+              <em>also, ICLR Workshop on Bridging the Gap Between Practice and Theory in Deep Learning</em>, 2024 (oral)
+              <br>
+              <a href="data/li2024promises.bib">bibtex</a>
+              / <a href="data/li2024promises_slides.pdf">slides</a>
+              / <a href="https://github.com/google-research/google-research/tree/master/padir">codes</a>
+              / <a href="https://x.com/_Yuchen_Li_/status/1816058858185298225">Twitter summary</a>
+<!--              / <a href="demo/transformer_topic_model.html">project page</a>-->
+<!--              / <a href="https://www.youtube.com/live/BZ34XH4ffEc?si=LjXAiYywQWys4zG5&t=20360">video recording of 15-minute talk (starts at 5:39:20)</a>-->
+              <p>We establish a mathematical framework for understanding the potentials of applying masked language models (MLMs) to generative tasks.
+                We theoretically analyze the training sample efficiency and the inference efficiency, and empirically characterize the critical components and failure modes.
+              </p>
+              <p>The highlight of our theory is a "dictionary" between the sample efficiency of MLM losses and the mixing times of Markov Chains.
+                As a side product, we show that masking more is always statistically better (but algorithmically harder).
+                Our theory also implies that "multimodal" distributions cause problems for both learning and inference.
+                Finally, we theoretically identify a limitation of Transformers for parallel decoding: they enforce conditional product distributions, which can prevent fast mixing at inference time.
+                We empirically validate our theory on synthetic and real data.
+              </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
               <img src="images/dyck_interpretability.png" alt="Typical attention patterns do not exactly match the intuitively interpretable stack-like pattern" style="width:100%;max-width:100%">
             </td>
             <td width="75%" valign="middle">
@@ -102,7 +149,8 @@
               <br>
               <a href="data/wen2023transformers.bib">bibtex</a>
               / <a href="data/wen2023transformers_slides.pdf">slides</a>
-              / <a href="https://twitter.com/_Yuchen_Li_">Twitter summary</a>
+              / <a href="https://openreview.net/attachment?id=OitmaxSAUu&name=supplementary_material">codes download</a>
+              / <a href="https://x.com/_Yuchen_Li_/status/1732158457263075730">Twitter summary</a>
               / <a href="https://www.youtube.com/live/BZ34XH4ffEc?si=LjXAiYywQWys4zG5&t=20360">video recording of 15-minute talk (starts at 5:39:20)</a>
               <p>We show that interpretability claims based on isolated attention patterns or weight components can be (provably) misleading.
               </p>
@@ -319,6 +367,25 @@
         </tbody></table>
         <br><br>
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/theory_experiments.png" alt="Connecting theory and experiments through synthetic data settings" style="width:100%;max-width:100%">
+              <br><br>
+            </td>
+            <td width="75%" valign="center">
+              <papertitle>Towards Mathematical Understanding of Modern Language Models</papertitle>
+              <br>
+              <a href="data/Towards Mathematical Understanding of Modern Language Models.pdf">slides</a>
+              / <a href="https://www.bilibili.com/video/BV1F1421R7kb">video recording of 60-minute talk (Chinese audio, English slides)</a>
+              <br><br>
+              2024-08
+              <a href="https://www.simonsfoundation.org/flatiron/">Flatiron Institute Transformers Reading Group</a>
+              <br><br>
+              2024-04
+              <a href="https://www.fai-seminar.ac.cn/">Seminar on Foundational Artificial Intelligence (Chinese language)</a>
+              <br><br>
+            </td>
+          </tr>
           <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
               <img src="images/dyck_interpretability.png" alt="Typical attention patterns do not exactly match the intuitively interpretable stack-like pattern" style="width:100%;max-width:100%">
