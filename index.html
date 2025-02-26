@@ -30,6 +30,9 @@
                 Professor <a href="http://hanj.cs.illinois.edu/">Jiawei&nbsp;Han</a>,
                 Professor <a href="https://math.illinois.edu/directory/profile/ajh">AJ&nbsp;Hildebrand</a>,
                 and Professor <a href="https://ece.princeton.edu/people/pramod-viswanath">Pramod&nbsp;Viswanath</a>.
+                In fall 2024, I was a visiting graduate student for the
+                <a href="https://simons.berkeley.edu/programs/modern-paradigms-generalization">Modern Paradigms in Generalization</a> program
+                at <a href="https://simons.berkeley.edu/homepage">Simons Institute for the Theory of Computing</a>.
               </p>
               <p>
                 In the industry, I spent some exciting time at
@@ -38,12 +41,6 @@
                 <a href="https://www.bytedance.com/en/">ByteDance (TikTok)</a> (summer 2022),
                 <a href="https://www.quora.com/about">Quora</a> (2019-2020),
                 and <a href="https://about.meta.com/">Facebook (Meta)</a> (summer 2018).
-              </p>
-              <p>
-                In fall 2024, I am a visiting graduate student for the
-                <a href="https://simons.berkeley.edu/programs/modern-paradigms-generalization">Modern Paradigms in Generalization</a> program
-                at <a href="https://simons.berkeley.edu/homepage">Simons Institute for the Theory of Computing</a>
-                in Berkeley, California, USA.
               </p>
               <p style="text-align:center">
                 <a href="mailto:yuchenl4@cs.cmu.edu">Email</a> &nbsp/&nbsp
@@ -90,6 +87,43 @@
         </tbody></table>
 
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+
+        <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/codellama_query_efficiency_no_bon.png" alt="Verifier-Assisted Sampling with Backtrack is Query Efficient" style="width:100%;max-width:100%">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2502.12123">
+                <papertitle>On the Query Complexity of Verifier-Assisted Language Generation</papertitle>
+              </a>
+              <br>
+                Edoardo Botta*,
+                <strong>Yuchen Li*</strong>,
+                Aashay Mehta*,
+                Jordan T. Ash,
+                Cyril Zhang,
+                Andrej Risteski
+              <br><br>
+              <em>arXiv</em>, 2025
+              <br>
+              <a href="data/botta2025query.bib">bibtex</a>
+<!--              / <a href="data/li2024promises_slides.pdf">slides</a>-->
+<!--              / <a href="https://github.com/google-research/google-research/tree/master/padir">codes</a>-->
+<!--              / <a href="https://x.com/_Yuchen_Li_/status/1816058858185298225">Twitter summary</a>-->
+<!--              / <a href="demo/transformer_topic_model.html">project page</a>-->
+<!--              / <a href="https://www.youtube.com/live/BZ34XH4ffEc?si=LjXAiYywQWys4zG5&t=20360">video recording of 15-minute talk (starts at 5:39:20)</a>-->
+              <p>In this paper, we develop a mathematical framework for reasoning about constrained generation
+                using a pre-trained language model generator oracle and a process verifier--which can decide whether
+                a prefix can be extended to a string which satisfies the constraints of choice.
+                We show that even in very simple settings, access to a verifier can render an intractable problem
+                (information-theoretically or computationally) to a tractable one.
+                In fact, we show even simple algorithms, like tokenwise rejection sampling, can enjoy significant benefits from access to a verifier.
+                Empirically, we show that a natural modification of tokenwise rejection sampling, in which the sampler is allowed to "backtrack"
+                (i.e., erase the final few generated tokens) has robust and substantive benefits over natural baselines
+                (e.g. (blockwise) rejection sampling, nucleus sampling)--both in terms of computational efficiency, accuracy and diversity.
+              </p>
+            </td>
+        </tr>
 
         <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
@@ -377,6 +411,9 @@
               <br>
               <a href="data/Towards Mathematical Understanding of Modern Language Models.pdf">slides</a>
               / <a href="https://www.bilibili.com/video/BV1F1421R7kb">video recording of 60-minute talk (Chinese audio, English slides)</a>
+              <br><br>
+              2025-02
+              <a href="https://www.cs.cmu.edu/~aiseminar/">CMU Artificial Intelligence Seminar Series</a>
               <br><br>
               2024-08
               <a href="https://www.simonsfoundation.org/flatiron/">Flatiron Institute Transformers Reading Group</a>
