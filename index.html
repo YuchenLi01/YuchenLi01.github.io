@@ -42,6 +42,13 @@
                 <a href="https://www.quora.com/about">Quora</a> (2019-2020),
                 and <a href="https://about.meta.com/">Facebook (Meta)</a> (summer 2018).
               </p>
+              <p style="color:red;">
+                <b>
+                  I am on the job market for research positions related to AI, machine learning, and language modeling (LLMs).
+                  Here is my <a href="data/Yuchen-Li-cv.pdf">CV (resume)</a>.
+                  To reach me, please <a href="mailto:yuchenl4@cs.cmu.edu">send me an email</a>.
+                </b>
+              </p>
               <p style="text-align:center">
                 <a href="mailto:yuchenl4@cs.cmu.edu">Email</a> &nbsp/&nbsp
                 <a href="data/Yuchen-Li-cv.pdf">CV (resume)</a> &nbsp/&nbsp
@@ -70,6 +77,30 @@
                 (training dynamics, efficient sampling, mechanistic interpretability), and
                 (2) developing principled approaches to self-supervised learning.
               </p>
+              <p>
+                For future work, I am broadly interested in large language models (LLMs) and related directions.
+              </p>
+              <p>
+                My PhD work (published or ongoing) involve the following topics in language modeling research:
+                <ul>
+                  <li>Sampling algorithms (e.g. parallel decoding, verifier-assisted sampling)</li>
+                  <li>Post-training (e.g. preference optimization, RLHF, DPO)</li>
+                  <li>Deep learning theory for Transformers (e.g. training dynamics, theoretical challenges of interpretability)</li>
+                </ul>
+              </p>
+              <p>
+                Prior to PhD, I worked on:
+                <ul>
+                  <li>Ads ranking / recommender systems</li>
+                  <li>Word embedding-based spelling error correction</li>
+                  <li>Learning algorithms for graph-structured data (especially text-rich graphs)</li>
+                  <li>Number theory (in pure mathematics)</li>
+                </ul>
+              </p>
+              <p>
+                Please refer to the section below for my published papers and their accompanying resources
+                (e.g. summaries, codes, slides, and video presentations).
+              </p>
             </td>
           </tr>
         </tbody></table>
@@ -90,6 +121,44 @@
 
         <tr>
             <td style="padding:0%;width:35%;vertical-align:middle">
+              <img src="images/rohatgi2025taming.png" alt="VGB: Value-Guided Sampling with Stochastic Backtracking" style="width:100%;max-width:100%">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2510.03149">
+                <papertitle>Taming Imperfect Process Verifiers: A Sampling Perspective on Backtracking</papertitle>
+              </a>
+              <br>
+                Dhruv Rohatgi,
+                Abhishek Shetty,
+                Donya Saless,
+                <strong>Yuchen Li</strong>,
+                Ankur Moitra,
+                Andrej Risteski,
+                Dylan J. Foster
+              <br><br>
+              <em>arXiv</em>, 2025
+              <br>
+              <a href="data/rohatgi2025taming.bib">bibtex</a>
+<!--              / <a href="data/botta2025query_slides.pdf">slides</a>-->
+<!--              / <a href="https://github.com/YuchenLi01/LM_Query_Complexity">codes</a>-->
+<!--              / <a href="https://x.com/risteski_a/status/1945143485788541116">Twitter summary</a>-->
+<!--              / <a href="demo/transformer_topic_model.html">project page</a>-->
+<!--              / <a href="https://icml.cc/virtual/2025/poster/46206">video recording of 5-minute talk</a>-->
+              <p>We introduce a new process-guided test-time sampling algorithm for language models, VGB,
+                which uses theoretically grounded backtracking to achieve provably better robustness to verifier errors.
+                VGB interprets autoregressive generation as a random walk on a tree of partial generations,
+                with transition probabilities guided by the process verifier and base model;
+                crucially, backtracking occurs probabilistically.
+                This process generalizes the seminal Sinclair-Jerrum random walk (Sinclair & Jerrum, 1989)
+                from the literature on approximate counting and sampling in theoretical computer science.
+                Empirically, we demonstrate on both synthetic and real language modeling tasks that VGB
+                outperforms baselines on a variety of metrics.
+              </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:0%;width:35%;vertical-align:middle">
               <img src="images/codellama_query_efficiency_no_bon.png" alt="Verifier-Assisted Sampling with Backtrack is Query Efficient" style="width:100%;max-width:100%">
             </td>
             <td width="75%" valign="middle">
@@ -104,14 +173,14 @@
                 Cyril Zhang,
                 Andrej Risteski
               <br><br>
-              <em>arXiv</em>, 2025
+              <em>International Conference on Machine Learning (ICML)</em>, 2025
               <br>
               <a href="data/botta2025query.bib">bibtex</a>
-<!--              / <a href="data/li2024promises_slides.pdf">slides</a>-->
-<!--              / <a href="https://github.com/google-research/google-research/tree/master/padir">codes</a>-->
-<!--              / <a href="https://x.com/_Yuchen_Li_/status/1816058858185298225">Twitter summary</a>-->
+              / <a href="data/botta2025query_slides.pdf">slides</a>
+              / <a href="https://github.com/YuchenLi01/LM_Query_Complexity">codes</a>
+              / <a href="https://x.com/risteski_a/status/1945143485788541116">Twitter summary</a>
 <!--              / <a href="demo/transformer_topic_model.html">project page</a>-->
-<!--              / <a href="https://www.youtube.com/live/BZ34XH4ffEc?si=LjXAiYywQWys4zG5&t=20360">video recording of 15-minute talk (starts at 5:39:20)</a>-->
+              / <a href="https://icml.cc/virtual/2025/poster/46206">video recording of 5-minute talk</a>
               <p>In this paper, we develop a mathematical framework for reasoning about constrained generation
                 using a pre-trained language model generator oracle and a process verifier--which can decide whether
                 a prefix can be extended to a string which satisfies the constraints of choice.
